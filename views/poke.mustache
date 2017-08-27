@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PokeDex</title>
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <nav>
+      <ul class="navUl">
+        <li><a href="/">PokeDex</a></li>
+        <li><a href="/add">Add</a></li>
+      </ul>
+    </nav>
+    <main>
+        <div class="pokePageCont">
+            <div class="pageCard">
+              <img src="../img/{{poke.Number}}.png" alt="thmb" class="indxImg">
+              <div class="indxHead">
+                <p class="pokeNum">{{poke.Number}}</p><h3 class="indxName">{{poke.Name}}</h3>
+              </div>
+              <p class="pokeType">Type: {{#poke.Types}}<a href="/type/{{.}}">{{.}}</a> {{/poke.Types}}</p>
+            </div>
+            <div class="pageDetails">
+              <p class="pageAbout">{{poke.About}}</p>
+            </div>
+          {{^poke}}
+            <p>No Pokemon yet? Better get to training.</p>
+          {{/poke}}
+        </div>
+        <div class="pageBtns">
+          <a href="/edit/{{poke.Number}}">Edit Entry</a>
+          <a href="/delete/{{poke.Number}}">Delete Entry</a>
+        </div>
+    </main>
+  </body>
+</html>
