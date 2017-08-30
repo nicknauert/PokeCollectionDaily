@@ -154,3 +154,25 @@ main {}
 .pageBtns>form>button:hover {
   text-decoration: underline;
 }
+
+.editPoke {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 45px 0;
+}
+
+.editPoke>form input {
+  height: 25px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  padding: 1px
+}
+
+.editPoke>form textarea {
+  height: 75px;
+  width: 255px;
+  border-radius: 4px;
+  padding: 2px;
+}
