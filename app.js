@@ -42,9 +42,10 @@ app.post('/add', (req, res) => {
   res.redirect('/');
 })
 
-app.delete('/delete/:id', (req, res) => {
-  dal.deletePoke(req.params.id);
-  res.redirect('/');
+app.post('/delete/:id', (req, res) => {
+  dal.deletePoke(req.params.id).then(function(){
+    res.redirect('/');
+  })
 })
 
 app.get('/edit/:id', (req, res) => {

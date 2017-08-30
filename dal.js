@@ -23,7 +23,7 @@ function createPoke(name, type){
 }
 
 function deletePoke(id){
-  Poke.deleteOne({ Number: id });
+  return Poke.findOne({ Number: id }).remove()
 }
 
 function editPoke(id, name, about){
@@ -41,5 +41,5 @@ function editPoke(id, name, about){
 
 
 module.exports = {
-  getAllPoke, getPokeByType, getPokeById, createPoke, editPoke
+  getAllPoke, getPokeByType, getPokeById, createPoke, editPoke, deletePoke
 }

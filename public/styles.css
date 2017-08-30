@@ -125,6 +125,8 @@ main {}
 .pageBtns {
   width: 200px;
   margin-left: 450px;
+  display: flex;
+  flex-flow: row nowrap;
 }
 
 .pageBtns>a {
@@ -133,4 +135,22 @@ main {}
   background-color: white;
   border: 2px solid rgb(64, 64, 64);
   border-radius: 4px;
+  text-decoration: none;
+}
+
+.pageBtns>a:hover {
+  text-decoration: underline;
+}
+
+.pageBtns>form>button {
+  font-size: 16px;
+  padding: 5px 7px;
+  color: rgb(213, 53, 37);
+  background-color: white;
+  border: 2px solid rgb(64, 64, 64);
+  border-radius: 4px;
+}
+
+.pageBtns>form>button:hover {
+  text-decoration: underline;
 }

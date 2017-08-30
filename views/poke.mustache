@@ -6,12 +6,7 @@
     <link rel="stylesheet" href="../styles.css">
   </head>
   <body>
-    <nav>
-      <ul class="navUl">
-        <li><a href="/">PokeDex</a></li>
-        <li><a href="/add">Add</a></li>
-      </ul>
-    </nav>
+    {{>_nav}}
     <main>
         <div class="pokePageCont">
             <div class="pageCard">
@@ -30,7 +25,10 @@
         </div>
         <div class="pageBtns">
           <a href="/edit/{{poke.Number}}">Edit Entry</a>
-          <a href="/delete/{{poke.Number}}">Delete Entry</a>
+          <form class="" action="/delete/{{poke.Number}}" method="POST">
+            <button type="submit" name="deletePoke">Delete Entry</button>
+          </form>
+
         </div>
     </main>
   </body>
